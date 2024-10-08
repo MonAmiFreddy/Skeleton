@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+#game-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu button {
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 10px;
+}
+
+#xray-image {
+  width: 80%;
+  margin-top: 20px;
+}
+
+#quiz-section {
+  margin-top: 40px;
+}
+
+#quiz-options button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+}

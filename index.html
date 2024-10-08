@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-Ray Explorers: Inside the Human Body</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Start Menu -->
+    <div id="start-menu" class="menu">
+      <h1>X-Ray Explorers: Inside the Human Body</h1>
+      <button onclick="startGame('explore')">Explore the Body</button>
+      <button onclick="startGame('challenge')">Challenge Mode</button>
+      <button onclick="startGame('puzzle')">Puzzle Mode</button>
+    </div>
+
+    <!-- Interactive Body Section -->
+    <div id="body-explorer" class="hidden">
+      <h2>Click on a body part to explore</h2>
+      <img src="images/human-body.png" alt="Human Body" usemap="#body-map">
+      <map name="body-map">
+        <area shape="rect" coords="100,100,200,200" href="#" onclick="showXray('skull')">
+        <area shape="rect" coords="300,300,400,400" href="#" onclick="showXray('ribs')">
+        <!-- Add more clickable areas as needed -->
+      </map>
+    </div>
+
+    <!-- X-Ray Viewer -->
+    <div id="xray-viewer" class="hidden">
+      <h2>Exploring: <span id="body-part-name"></span></h2>
+      <img id="xray-image" src="" alt="X-ray view">
+      <button onclick="showQuiz()">Take Quiz</button>
+      <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-section" class="hidden">
+      <h2>Quiz Time!</h2>
+      <p id="quiz-question"></p>
+      <div id="quiz-options"></div>
+      <button onclick="submitAnswer()">Submit</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
